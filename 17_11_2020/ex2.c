@@ -50,7 +50,7 @@ int main(int argc, char const *argv[])
 	struct sigaction act;
 	
 	act.sa_handler = nova;
-	act.sa_flags = SA_SIGINFO;
+	act.sa_flags = SA_SIGINFO; // SA_SIGINFO indica que deve usar sa_sigaction e nao a sa_handler
 	sigaction(SIGALRM, &act, NULL);
 #endif
 
